@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th = "http://www.thymeleaf.org/">
-<head>
+<head th:replace="fragments :: head">
     <meta charset="UTF-8">
     <title>Select Your Spa Services</title>
-    <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
 </head>
-<body>
+<body class="container">
     <form method = 'post'>
 
-        <label>
+        <label class="form-label">
             Skin type:
             <select name = 'skintype'>
                 <option value = 'oily'>Oily</option>
@@ -17,14 +16,14 @@
                 <option value = 'dry'>Dry</option>
             </select>
         </label>
-        <label>
+        <label class="form-label">
             Manicure or Pedicure?
             <select name = 'manipedi'>
                 <option value = 'manicure'>Manicure</option>
                 <option value = 'pedicure'>Pedicure</option>
             </select>
         </label>
-        <input type = 'submit' value = 'Submit'>
+        <input type = 'submit' value = 'Submit' class="btn btn-success">
     </form>
 </body>
 </html>
