@@ -8,22 +8,22 @@ import java.util.Map;
 
 public class UserData {
 
-    private static final Map<Integer, User> userList = new HashMap<>();
+    public static final Map<Integer, User> users = new HashMap<>();
 
     public static Collection<User> getAll() {
-        return userList.values();
+        return users.values();
     }
 
     public static void add(User user) {
-        userList.put(user.getId(), user);
+        users.put(user.getId(), user);
     }
 
     public static User getById(int id) {
-        return userList.get(id);
+        return users.get(id);
     }
 
     public static void remove(int id) {
-            userList.remove(id);
+            users.remove(id);
     }
 
 }
